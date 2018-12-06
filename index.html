@@ -5,11 +5,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Destination Unknown</title>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
 
 <body>
 
+    <!-- <div class="header">
+        <div class="header-title">
+            <img src="https://png2.kisspng.com/20180626/kls/kisspng-earth-globe-clip-art-5b3226029dccb8.9919318115300131866464.png"
+                class="logo">
+            <div class="animate one">
+                <span>P</span><span>l</span><span>a</span><span>n</span>
+                <span>Y</span><span>o</span><span>u</span><span>r</span>
+                <span>T</span><span>r</span><span>i</span><span>p</span><span>!</span> -->
+
+    <!--<span>t</span> -->
+    <!-- </div>
+        </div>
+
+        <div class="header-right">
+            <a class="active" href="#home">Login/Register</a>
+        </div>
+    </div> -->
+
+
+    <!-- NAV BAR -->
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a href="#test1">Test 1</a></li>
+                <li class="tab"><a class="active" href="#test2">Test 2</a></li>
+                <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
+                <li class="tab"><a href="#test4">Test 4</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+    </ul>
+    <!-- <div id="test1" class="col s12">Test 1</div>
+    <div id="test2" class="col s12">Test 2</div>
+    <div id="test3" class="col s12">Test 3</div>
+    <div id="test4" class="col s12">Test 4</div> -->
+    <!-- END NAV BAR -->
+
+
+
+
+
+
+
+
+
+
+    <!-- CONTENT CONTAINER -->
+    <div id="flight-panel" class="container ">
+        <div class="row">
+            <div class="flight-info col s3">
+                <div class="panel-heading black">
+                    <h2 class="panel-title black">Flights</h2>
+                </div>
+                <div class="flight-body"></div>
+                <div class="form-group">
+                    <label>Leaving</label>
+                    <input id="location-input" type="text" class="form-control" placeholder="City or Airport">
+                    <br>
+                    <br>
+                    <label>Destination</label>
+                    <input id="destination-input" type="text" class="form-control" placeholder="Destination">
+                    <br>
+                    <br>
+                    <label>Departing</label>
+                    <input type="text" class="datepicker" placeholder="mm/dd/yyyy">
+                    <br>
+                    <br>
+                    <label>Returning</label>
+                    <input type="text" class="datepicker" placeholder="mm/dd/yyyy">
+                    <br>
+                    <br>
+                    <button type="submit" class="submit">Submit</button>
+                </div>
+            </div>
+            <div class="weather-info col s9">
+                <div class="local-weather row">
+                    <div class="local col s3">
+                        <div class="cityName" id="city-name1">Tucson</div>
+                        <div>
+                            <div class="row">Current Weather
+
+                            </div>
+                            <div class="row">
+                                <div class='col s3'>
+                                    <div class="row" id="city1Day1">mon</div>
+                                    <div class="row" id="city1Day1Icon">icon</div>
+                                    <div class="row" id="city1Day1Temp">temp</div>
+                                </div>
+                                <div class='col s3'>
+                                    <div class="row" id="city1Day2">tues</div>
+                                    <div class="row" id="city1Day2Icon">icon</div>
+                                    <div class="row" id="city1Day2Temp">temp</div>
+                                </div>
+                                <div class='col s3'>
+                                    <div class="row" id="city1Day3">wed</div>
+                                    <div class="row" id="city1Day3Icon">icon</div>
+                                    <div class="row" id="city1Day3Temp">temp</div>
+                                </div>
+
+                                <div class='col s3'>
+                                    <div class="row" id="city1Day4">thurs</div>
+                                    <div class="row" id="city1Day4Icon">icon</div>
+                                    <div class="row" id="city1Day4Temp">temp</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <video class="video-fluid z-depth-1" autoplay loop controls muted>
+                            <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="col s3">
+                        <div class="cityName" id="city-name2">Tucson</div>
+                        <div>
+                            <div class="row">Current Weather
+
+                            </div>
+                            <div class="row">
+                                <div class='col s3'>
+                                    <div class="row" id="city2Day1">mon</div>
+                                    <div class="row" id="city2Day1Icon">icon</div>
+                                    <div class="row" id="city2Day1Temp">temp</div>
+                                </div>
+                                <div class='col s3'>
+                                    <div class="row" id="city2Day2">tues</div>
+                                    <div class="row" id="city2Day2Icon">icon</div>
+                                    <div class="row" id="city2Day2Temp">temp</div>
+                                </div>
+                                <div class='col s3'>
+                                    <div class="row" id="city2Day3">wed</div>
+                                    <div class="row" id="city2Day3Icon">icon</div>
+                                    <div class="row" id="city2Day3Temp">temp</div>
+                                </div>
+
+                                <div class='col s3'>
+                                    <div class="row" id="city2Day4">thurs</div>
+                                    <div class="row" id="city2Day4Icon">icon</div>
+                                    <div class="row" id="city2Day4Temp">temp</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="flight-display col s12">
+                    <div class="row">
+                        <table id="arrival-table" class="table">
+                            <thead>
+                            <tbody id="arrival-table-body">
+                                <tr>
+                                    <th>Departing From</th>
+                                    <th>Arrival To</th>
+                                    <th>Date Leaving</th>
+                                    <th>Date Returning</th>
+                                </tr>
+                            </tbody>
+                            </thead>
+                            <tbody id="input-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="./assets/htmlapp.js"></script>
 </body>
 
 </html>
