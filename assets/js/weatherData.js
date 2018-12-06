@@ -17,7 +17,7 @@ $(document).ready(function () {
         const apiKey = "ce836c9b60ad9971ea91f7fa53b647fc";
         for (let i = 0; i < cityArr.length; i++) {
             let city = cityArr[i].city;
-            const queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&APPID=" + apiKey;
+            const queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&APPID=" + apiKey;
             $.ajax({
                 url: queryURL,
                 method: "GET"
