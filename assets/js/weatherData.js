@@ -1,10 +1,10 @@
 $(document).ready(function () {
     let cityArr = [];
 
-    $("#submit").on("click", function () {
+    $(".submit").on("click", function () {
         cityArr = [];
-        let begin = $("#startCity").val().trim();
-        let end = $("#destinationCity").val().trim();
+        let begin = $("#location-input").val().trim();
+        let end = $("#destination-input").val().trim();
         if (begin !== "" && end !== ""){
         cityArr.push({city: begin}, {city: end});
         weatherData();
@@ -23,7 +23,6 @@ $(document).ready(function () {
                 method: "GET"
             }).then(function (response) {
                 var results = response;
-                // console.log(results);
                 let lat = results.coord.lat;
                 let lon = results.coord.lon;
                 let temperature = results.main.temp;
@@ -33,7 +32,6 @@ $(document).ready(function () {
                 let weatherMain = results.weather[0].main;
                 let description = results.weather[0].description;
                 let id = "icon" + cityArr.indexOf(cityArr[i]);
-                console.log(id);
                 cityArr[i].lat = lat;
                 cityArr[i].lon = lon;
                 cityArr[i].maxTemp = maxTemp;
@@ -42,19 +40,24 @@ $(document).ready(function () {
                 cityArr[i].weatherMain = weatherMain;
                 cityArr[i].description = description;
                 cityArr[i].id = id;
-                console.log(cityArr)
+
                 // Show selected cities name in <div>
-                $("#initial").text(cityArr[0].city);
-                $("#destination").text(cityArr[1].city);
+                $("#city-name1").text(cityArr[0].city).addClass("text-capitalize");
+                $("#city-name2").text(cityArr[1].city).addClass("text-capitalize");
 
                 // Grab temperature from object and show temp in farenheit in <div>
                 const degree = temperature;
                 cityArr[i].temperature = Math.round(degree);
-                $(".initialCity").text("Current Temperature: " + cityArr[0].temperature + "\xB0F");
-                $(".destinationCity").text("Current Temperature: " + cityArr[1].temperature + "\xB0F");
+                $("#city1Day1Temp").text("Current Temperature: " + cityArr[0].temperature + "\xB0F");
+                $("#city2Day1Temp").text("Current Temperature: " + cityArr[1].temperature + "\xB0F");
 
                 // Grab lat and lon for Skycons
                 getData(lat, lon, id);
+
+                // Passing lat lon of second city for video API
+                // if (i === 1){
+                // JoshFuntcionHere(lat, lon);
+                // }
             })
         }
     }
