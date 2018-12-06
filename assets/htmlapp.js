@@ -3,7 +3,6 @@ $( function() {
   } );
 
 
-<<<<<<< HEAD
   // Function to capitalize first letter in inputs and city names shown
   $(document).ready(function () {  
     $(".form-control").keyup(function () {  
@@ -11,14 +10,3 @@ $( function() {
         $('.cityName').css('textTransform', 'capitalize');
     });  
 });
-=======
-  // // Carousel jQuery
-
-  // $(document).ready(function(){
-  //   $('.carousel').carousel();
-  // });
-
-  $('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true});
->>>>>>> Current work
