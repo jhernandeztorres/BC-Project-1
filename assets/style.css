@@ -36,16 +36,20 @@ body {
     max-width: 2000px;
     margin-top: 5px;
     margin: 0 auto;
-    /* background-image: url(https://i1.wp.com/www.wwhf.org/wp-content/uploads/2014/04/map-background.jpg?ssl=1);  */
     background-image: url(https://cdn.hipwallpaper.com/i/36/95/x9o3JZ.png);    
     background-size: cover;
-    
-    
 }
 
 .nav-extended{
   background-color: black;
 }
+
+nav .brand-logo{
+    color: white;
+    font-size: 4.1rem;
+    padding: 10px;
+}
+
 
 .header-title{
   width: 75%;
@@ -62,29 +66,23 @@ body {
     background-color:rgba(37, 151, 192, 0.37);
     padding-top: 20px;
   }
-  .local-weather{
+.local-weather{
     padding: 50px;
   }
 
-  .header-right {
+.header-right {
     float: right;
     margin-bottom: 1px;
     width: 20%;
   }
-  .active{
+.active{
     color: black;
   }
 
-  .logo{
-    float: left;
-    max-width: 75px;
-    max-height: 75px;
-  }
-
-  .form-group{
+.form-group{
       color: black;
   }
-  .form-control{
+.form-control{
       color: black; 
       font-size: 20px;
   }
@@ -133,7 +131,7 @@ button:hover{
   
   
 
-  @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+  /* @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
  
   
   .animate {
@@ -201,12 +199,12 @@ button:hover{
   }
   .animate span:nth-of-type(20) {
       animation-delay: .95s;
-  }
+  } */
   
   
   /* Animation One */
   
-  .one span {
+  /* .one span {
       color: black;
       font-size: 50px;
       opacity: 0;
@@ -224,5 +222,5 @@ button:hover{
           opacity: 1;
       }
   }
-  
+   */
   
