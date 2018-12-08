@@ -4,11 +4,13 @@ $(document).ready(function () {
     $(".submit").on("click", function (e) {
         e.preventDefault()
         cityArr = [];
+        iatacodes = [];
         let begin = $("#location-input").val().trim();
         let end = $("#destination-input").val().trim();
         if (begin !== "" && end !== "") {
             cityArr.push({ city: begin }, { city: end });
             weatherData();
+            aroundIATA(begin, end)
         } else {
             alert("Fill out all fields");
         }
