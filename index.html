@@ -8,7 +8,6 @@
     <title>Destination Unknown</title>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
 
@@ -17,107 +16,93 @@
     <!-- Local Weather -->
     <div class="weather-info col s2">
         <div class="local-weather row">
-            <div class="col s3">
-                <div class="row" id="weather">Current Weather
-                    <div class="cityName" id="city-name1"></div>
-                    <canvas id="icon0" width="64" height="64"></canvas>
-                </div>
-                <div class="row">
-                    <div class='col s3'>
-                        <div class="row" id="city1Day1Temp"></div>
-                    </div>
-                </div>
+            <div class="col s6">
+                <p>Local Weather</p>
+                <div class="cityName" id="city-name1"></div>
+                <canvas id="icon0" width="64" height="64"></canvas>
+                <div id="city1Day1Temp"></div>
             </div>
-            <div class="weather-info col s9">
-                <div class="local-weather row">
-                    <div class="local col s3">
-                        <div class="row">Current Weather
-                            <div class="cityName" id="city-name1"></div>
-                            <canvas id="icon0" width="64" height="64"></canvas>
-                        </div>
-                        <div class="row">
-                            <div class='col s3'>
-                                <div class="row" id="city1Day1Temp"></div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col s6">
+                <p>Destination Weather</p>
+                <div class="cityName" id="city-name2"></div>
+                <canvas id="icon1" width="64" height="64"></canvas>
+                <div id="city2Day1Temp"></div>
 
-                </div>
-                <!-- End Destination Weather -->
-                <!-- Flight Box -->
-                <div class="section-center">
-                    <div class="container">
-                        <div>
-                            <div class="col-md-4">
-                                <div class="booking-cta">
-                                    <h1>Book your flight today</h1>
-                                    <a href="#video">
-                                        <p>Click Here For Live Video Of Your Destination!</p>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-md-7 col-md-offset-1">
-                                <div class="booking-form">
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <span class="form-label">Flying from</span>
-                                                    <input id="location-input" class="form-control" type="text"
-                                                        placeholder="City or airport">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <span class="form-label">Flying to</span>
-                                                    <input id="destination-input" class="form-control" type="text"
-                                                        placeholder="City or airport">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="form-btn">
-                                <button class="submit">Show flights</button>
-                            </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <!-- End Flight Box -->
-        </div>
-        <!-- Flight Results -->
-        <div class="flight-display col s12">
-            <div class="row">
-                <table id="arrival-table" class="table">
-                    <thead>
-                    <tbody id="arrival-table-body">
-                        <tr id="data-table">
-                            <th id="data-results">Departing From</th>
-                            <th>Arrival To</th>
-                            <th>Date Leaving</th>
-                            <th>Date Returning</th>
-                        </tr>
-                    </tbody>
-                    </thead>
-                    <tbody id="input-table-body"></tbody>
-                </table>
-            </div>
-        </div>
-        <!-- End Flight Results -->
-        <div class="col s6">
-            <a name="video">
-                <video class="video-fluid z-depth-1" autoplay loop controls muted>
-                    <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/mp4" />
-                </video>
-            </a>
         </div>
     </div>
-    <!-- Webcam Div -->
-    <div class="col s6" id=Webcam>
-        <!-- JQuery for webcam function inserts here -->
+    </div>
+    <!-- End Destination Weather -->
+    <!-- Flight Box -->
+    <div class="section-center">
+        <div class="container">
+            <div>
+                <div class="col-md-4">
+                    <div class="booking-cta">
+                        <h1>Book your flight today</h1>
+                        <a href="#webcam">
+                            <p>Click Here For Live Video Of Your Destination!</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-7 col-md-offset-1">
+                    <div class="booking-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Flying from</span>
+                                        <input id="location-input" class="form-control" type="text" placeholder="City or airport">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Flying to</span>
+                                        <input id="destination-input" class="form-control" type="text" placeholder="City or airport">
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="form-btn">
+                    <button class="submit">Show flights</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- End Flight Box -->
+    </div>
+    <!-- Flight Results -->
+    <div class="flight-display col s12">
+        <div class="row">
+            <table id="arrival-table" class="table">
+                <thead>
+                <tbody id="arrival-table-body">
+                    <tr id="data-table">
+                        <th id="data-results">Departing From</th>
+                        <th>Arrival To</th>
+                        <th>Date Leaving</th>
+                        <th>Date Returning</th>
+                    </tr>
+                </tbody>
+                </thead>
+                <tbody id="input-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+    <!-- End Flight Results -->
+    <div class="col s6">
+        <a name="video">
+                <!-- Webcam Div -->
+                <div class="col s6" id=Webcam>
+                    <!-- JQuery for webcam function inserts here -->
+                </div>
+            </video>
+        </a>
+    </div>
     </div>
 
     </div>
@@ -125,8 +110,8 @@
         crossorigin="anonymous"></script>
     <!-- SKycons CDN -->
     <script type="text/javascript" src="https://darkskyapp.github.io/skycons/skycons.js"></script>
-    <script type="text/javascript" src="./assets/htmlapp.js"></script>
-    <script src="assets/js/webcam.js"></script>
+    <script type="text/javascript" src="assets/htmlapp.js"></script>
+    <script src="./assets/js/webcam.js"></script>
     <script src="./assets/js/weatherData.js"></script>
 </body>
 
