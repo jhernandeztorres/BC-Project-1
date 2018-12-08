@@ -1,7 +1,8 @@
 $(document).ready(function () {
     let cityArr = [];
 
-    $(".submit").on("click", function () {
+    $(".submit").on("click", function (e) {
+        e.preventDefault()
         cityArr = [];
         let begin = $("#location-input").val().trim();
         let end = $("#destination-input").val().trim();
