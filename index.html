@@ -41,53 +41,39 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">Current Weather
-                        <div class="cityName" id="city-name2"></div>
-                        <div>
-                            <canvas id="icon1" width="64" height="64"></canvas>
-                        </div>
 
-                        <div class="col-md-7 col-md-offset-1">
-                            <div class="booking-form">
-                                <form>
-                                    <div class="form-group">
-                                        <div class="form-checkbox">
-                                            <label for="roundtrip">
-                                                <input type="radio" id="roundtrip" name="flight-type">
-                                                <span></span>Roundtrip
-                                            </label>
-                                            <label for="one-way">
-                                                <input type="radio" id="one-way" name="flight-type">
-                                                <span></span>One way
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <span class="form-label">Flying from</span>
-                                                <input id="location-input" class="form-control" type="text" placeholder="City or airport">
+                </div>
+                <!-- End Destination Weather -->
+                <!-- Flight Box -->
+                <div class="section-center">
+                    <div class="container">
+                        <div>
+                            <div class="col-md-4">
+                                <div class="booking-cta">
+                                    <h1>Book your flight today</h1>
+                                    <a href="#video">
+                                        <p>Click Here For Live Video Of Your Destination!</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-7 col-md-offset-1">
+                                <div class="booking-form">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <span class="form-label">Flying from</span>
+                                                    <input id="location-input" class="form-control" type="text"
+                                                        placeholder="City or airport">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <span class="form-label">Flying to</span>
-                                                <input id="destination-input" class="form-control" type="text"
-                                                    placeholder="City or airport">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <span class="form-label">Departing</span>
-                                                <input class="form-control" type="date" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <span class="form-label">Returning</span>
-                                                <input class="form-control" type="date" required>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <span class="form-label">Flying to</span>
+                                                    <input id="destination-input" class="form-control" type="text"
+                                                        placeholder="City or airport">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -100,23 +86,33 @@
                     </div>
                 </div>
             </div>
+            <!-- End Flight Box -->
         </div>
-    </div>
-    <div class="flight-display col s12">
-        <div class="row">
-            <table id="arrival-table" class="table">
-                <thead>
-                <tbody id="arrival-table-body">
-                    <tr id="data-table">
-                        <th id="data-results">Departing From</th>
-                        <th>Arrival To</th>
-                        <th>Date Leaving</th>
-                        <th>Date Returning</th>
-                    </tr>
-                </tbody>
-                </thead>
-                <tbody id="input-table-body"></tbody>
-            </table>
+        <!-- Flight Results -->
+        <div class="flight-display col s12">
+            <div class="row">
+                <table id="arrival-table" class="table">
+                    <thead>
+                    <tbody id="arrival-table-body">
+                        <tr id="data-table">
+                            <th id="data-results">Departing From</th>
+                            <th>Arrival To</th>
+                            <th>Date Leaving</th>
+                            <th>Date Returning</th>
+                        </tr>
+                    </tbody>
+                    </thead>
+                    <tbody id="input-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+        <!-- End Flight Results -->
+        <div class="col s6">
+            <a name="video">
+                <video class="video-fluid z-depth-1" autoplay loop controls muted>
+                    <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/mp4" />
+                </video>
+            </a>
         </div>
     </div>
     <!-- Webcam Div -->
@@ -127,9 +123,6 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     <!-- SKycons CDN -->
     <script type="text/javascript" src="https://darkskyapp.github.io/skycons/skycons.js"></script>
     <script type="text/javascript" src="./assets/htmlapp.js"></script>
