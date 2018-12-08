@@ -1,34 +1,17 @@
 
-input::placeholder{
-  color: black;
-  font-size: 20px;
-
-}
 label{
   color: white;
   font-size: 20px;
 }
-.ui-datepicker{
-  background-color: white;
-  font-size: 25px;
-}
-
-.panel-heading{
-	background-color: black;
-    color: white;
-    
-}
-
-.black {
-	background-color: black;
-	color: white;
-}
-
 body {
     font-family: 'EB Garamond', serif;
     text-align: center;
     font-size: 25px;
     color: black;
+    background-image: url(https://images.unsplash.com/photo-1537461992341-9a32ae2b0054?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=282&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #flight-panel {
@@ -36,65 +19,44 @@ body {
     max-width: 2000px;
     margin-top: 5px;
     margin: 0 auto;
-    /* background-image: url(https://i1.wp.com/www.wwhf.org/wp-content/uploads/2014/04/map-background.jpg?ssl=1);  */
-    background-image: url(https://cdn.hipwallpaper.com/i/36/95/x9o3JZ.png);    
+    /* background-image: url(https://cdn.hipwallpaper.com/i/36/95/x9o3JZ.png);     */
     background-size: cover;
-    
-    
+   
+}
+#data-results{
+    text-align: center;
 }
 
-.nav-extended{
-  background-color: black;
+#destination-weather{
+    float: right;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
 }
 
-.header-title{
-  width: 75%;
-  margin-right: 0;
-}
-
-#flight-info{
-    box-shadow: 0 10px 30px rgba(0,0,0,5);
-    
-}
-
-.header {
-    overflow: hidden;
-    background-color:rgba(37, 151, 192, 0.37);
-    padding-top: 20px;
-  }
-  .local-weather{
+.local-weather{
     padding: 50px;
   }
 
-  .header-right {
-    float: right;
-    margin-bottom: 1px;
-    width: 20%;
-  }
-  .active{
+
+.active{
     color: black;
   }
 
-  .logo{
-    float: left;
-    max-width: 75px;
-    max-height: 75px;
-  }
-
-  .form-group{
+.form-group{
       color: black;
   }
-  .form-control{
+.form-control{
       color: black; 
       font-size: 20px;
   }
   .video-fluid {
-    width: 480px;
+    width: 1000px;
     height: auto;
     padding: 5, 0, 0, 0;
   }
+  /* SUBMIT BUTTON */
 .submit{
-  background:black;
+  background:#4fa3e3;
         color:#fff;
         border:none;
         position:relative;
@@ -108,7 +70,7 @@ body {
 }
 button:hover{
     background:#fff;
-    color:black;
+    color:#4fa3e3;
   }
   button:before,button:after{
     content:'';
@@ -117,7 +79,7 @@ button:hover{
     right:0;
     height:2px;
     width:0;
-    background:black;
+    background:#4fa3e3;
     transition:400ms ease all;
   }
   button:after{
@@ -130,99 +92,201 @@ button:hover{
     width:100%;
     transition:800ms ease all;
   }
+  /* END SUBMIT BUTTON */
   
-  
+  .section {
+	position: relative;
+    height: 100vh;
+    
+}
 
-  @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
- 
-  
-  .animate {
-      font-size: 25px;
-      
-  }
-  
-  .animate span {
-      display: inline-block;
-  }
-  
-  .animate span:nth-of-type(2) {
-      animation-delay: .05s;
-  }
-  .animate span:nth-of-type(3) {
-      animation-delay: .1s;
-  }
-  .animate span:nth-of-type(4) {
-      animation-delay: .15s;
-  }
-  .animate span:nth-of-type(5) {
-      animation-delay: .2s;
-  }
-  .animate span:nth-of-type(6) {
-      animation-delay: .25s;
-  }
-  .animate span:nth-of-type(7) {
-      animation-delay: .3s;
-  }
-  .animate span:nth-of-type(8) {
-      animation-delay: .35s;
-  }
-  .animate span:nth-of-type(9) {
-      animation-delay: .4s;
-  }
-  .animate span:nth-of-type(10) {
-      animation-delay: .45s;
-  }
-  .animate span:nth-of-type(11) {
-      animation-delay: .5s;
-  }
-  .animate span:nth-of-type(12) {
-      animation-delay: .55s;
-  }
-  .animate span:nth-of-type(13) {
-      animation-delay: .6s;
-  }
-  .animate span:nth-of-type(14) {
-      animation-delay: .65s;
-  }
-  .animate span:nth-of-type(15) {
-      animation-delay: .7s;
-  }
-  .animate span:nth-of-type(16) {
-      animation-delay: .75s;
-  }
-  .animate span:nth-of-type(17) {
-      animation-delay: .8s;
-  }
-  .animate span:nth-of-type(18) {
-      animation-delay: .85s;
-  }
-  .animate span:nth-of-type(19) {
-      animation-delay: .9s;
-  }
-  .animate span:nth-of-type(20) {
-      animation-delay: .95s;
-  }
-  
-  
-  /* Animation One */
-  
-  .one span {
-      color: black;
-      font-size: 50px;
-      opacity: 0;
-      transform: translate(-150px, -50px) rotate(-180deg) scale(3);
-      animation: revolveScale .4s forwards;
-  }
-  
-  @keyframes revolveScale {
-      60% {
-          transform: translate(20px, 20px) rotate(30deg) scale(.3);
-      }
-  
-      100% {
-          transform: translate(0) rotate(0) scale(1);
-          opacity: 1;
-      }
-  }
-  
-  
+.section .section-center {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+/* BOOKING BOX */
+#booking {
+	font-family: 'Lato', sans-serif;
+	background-image: url('../img/background.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #191a1e;
+}
+
+.booking-form {
+	position: relative;
+	background: #fff;
+	max-width: 642px;
+	width: 100%;
+	margin: auto;
+	padding: 45px 25px 25px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.booking-form .form-group {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.booking-form .form-control {
+	background-color: #fff;
+	height: 65px;
+	padding: 0px 15px;
+	padding-top: 24px;
+	color: #191a1e;
+	border: 2px solid #dfe5e9;
+	font-size: 16px;
+	font-weight: 700;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 4px;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+	color: #dfe5e9;
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+	color: #dfe5e9;
+}
+
+.booking-form .form-control::placeholder {
+	color: #dfe5e9;
+}
+
+.booking-form .form-control:focus {
+	background: #f9fafb;
+}
+
+.booking-form input[type="date"].form-control:invalid {
+	color: #dfe5e9;
+}
+
+.booking-form select.form-control {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.booking-form select.form-control+.select-arrow {
+	position: absolute;
+	right: 6px;
+	bottom: 6px;
+	width: 32px;
+	line-height: 32px;
+	height: 32px;
+	text-align: center;
+	pointer-events: none;
+	color: #dfe5e9;
+	font-size: 14px;
+}
+
+.booking-form select.form-control+.select-arrow:after {
+	content: '\279C';
+	display: block;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.booking-form .form-label {
+	position: absolute;
+	top: 0px;
+	left: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 0px;
+	height: 24px;
+	font-size: 18px;
+	color: #84b8df;
+}
+
+.booking-form .form-checkbox input {
+	position: absolute !important;
+	margin-left: -9999px !important;
+	visibility: hidden !important;
+}
+
+.booking-form .form-checkbox label {
+	position: relative;
+	padding-top: 4px;
+	padding-left: 50px;
+	font-weight: 700;
+	color: #191a1e;
+}
+
+.booking-form .form-checkbox label+label {
+	margin-left: 15px;
+}
+
+.booking-form .form-checkbox input+span {
+	position: absolute;
+	left: 2px;
+	top: 4px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border: 0px solid #dfe5e9;
+	border-radius: 50%;
+}
+
+.booking-form .form-checkbox input+span:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0px;
+	height: 0px;
+	border-radius: 50%;
+	background-color: #4fa3e3;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.booking-form .form-checkbox input:not(:checked)+span:after {
+	opacity: 0;
+}
+
+.booking-form .form-checkbox input:checked+span:after {
+	opacity: 1;
+	width: 10px;
+	height: 10px;
+}
+
+.booking-form .submit-btn {
+	color: #fff;
+	background-color: #4fa3e3;
+	font-weight: 400;
+	height: 65px;
+	font-size: 18px;
+	border: none;
+	width: 100%;
+	border-radius: 4px;
+	text-transform: uppercase
+}
+
+.booking-cta {
+	margin-top: 45px;
+}
+
+.booking-cta h1 {
+	font-size: 52px;
+	text-transform: uppercase;
+	color: #4fa3e3;
+	font-weight: 400;
+}
+
+.booking-cta p {
+	font-size: 22px;
+	color: #191a1e;
+}
+/* END BOOKING BOX */

@@ -8,99 +8,24 @@
     <title>Destination Unknown</title>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
 
 <body>
 
-    <!-- <div class="header">
-        <div class="header-title">
-            <img src="https://png2.kisspng.com/20180626/kls/kisspng-earth-globe-clip-art-5b3226029dccb8.9919318115300131866464.png"
-                class="logo">
-            <div class="animate one">
-                <span>P</span><span>l</span><span>a</span><span>n</span>
-                <span>Y</span><span>o</span><span>u</span><span>r</span>
-                <span>T</span><span>r</span><span>i</span><span>p</span><span>!</span> -->
-
-    <!--<span>t</span> -->
-    <!-- </div>
-        </div>
-
-        <div class="header-right">
-            <a class="active" href="#home">Login/Register</a>
-        </div>
-    </div> -->
-
-
-    <!-- NAV BAR -->
-    <nav class="nav-extended">
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Logo</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
-            </ul>
-        </div>
-        <div class="nav-content">
-            <ul class="tabs tabs-transparent">
-                <li class="tab"><a href="#test1">Test 1</a></li>
-                <li class="tab"><a class="active" href="#test2">Test 2</a></li>
-                <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
-                <li class="tab"><a href="#test4">Test 4</a></li>
-            </ul>
-        </div>
-    </nav>
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-    </ul>
-    <!-- <div id="test1" class="col s12">Test 1</div>
-    <div id="test2" class="col s12">Test 2</div>
-    <div id="test3" class="col s12">Test 3</div>
-    <div id="test4" class="col s12">Test 4</div> -->
-    <!-- END NAV BAR -->
-
-
-
-
-
-
-
-
-
-
-    <!-- CONTENT CONTAINER -->
-    <div id="flight-panel" class="container ">
-        <div class="row">
-            <div class="flight-info col s3">
-                <div class="panel-heading black">
-                    <h2 class="panel-title black">Flights</h2>
+    <!-- Local Weather -->
+    <div class="weather-info col s2">
+        <div class="local-weather row">
+            <div class="col s3">
+                <div class="row" id="weather">Current Weather
+                    <div class="cityName" id="city-name1"></div>
+                    <canvas id="icon0" width="64" height="64"></canvas>
                 </div>
-                <div class="flight-body"></div>
-                <div class="form-group">
-                    <label>Leaving</label>
-                    <input id="location-input" type="text" class="form-control" placeholder="City or Airport">
-                    <br>
-                    <br>
-                    <label>Destination</label>
-                    <input id="destination-input" type="text" class="form-control" placeholder="Destination">
-                    <br>
-                    <br>
-                    <label>Departing</label>
-                    <input type="text" class="datepicker" placeholder="mm/dd/yyyy">
-                    <br>
-                    <br>
-                    <label>Returning</label>
-                    <input type="text" class="datepicker" placeholder="mm/dd/yyyy">
-                    <br>
-                    <br>
-                    <button type="submit" class="submit">Submit</button>
+                <div class="row">
+                    <div class='col s3'>
+                        <div class="row" id="city1Day1Temp"></div>
+                    </div>
                 </div>
             </div>
             <div class="weather-info col s9">
@@ -116,46 +41,95 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s6" id="Webcam">
-                        <!-- Live Webcam Feed gets placed in this div through jQuery -->
-                    </div>
-                    <div class="col s3">
-                        <div class="row">Current Weather
-                            <div class="cityName" id="city-name2"></div>
-                            <div>
-                                <canvas id="icon1" width="64" height="64"></canvas>
+                    <div class="row">Current Weather
+                        <div class="cityName" id="city-name2"></div>
+                        <div>
+                            <canvas id="icon1" width="64" height="64"></canvas>
+                        </div>
+
+                        <div class="col-md-7 col-md-offset-1">
+                            <div class="booking-form">
+                                <form>
+                                    <div class="form-group">
+                                        <div class="form-checkbox">
+                                            <label for="roundtrip">
+                                                <input type="radio" id="roundtrip" name="flight-type">
+                                                <span></span>Roundtrip
+                                            </label>
+                                            <label for="one-way">
+                                                <input type="radio" id="one-way" name="flight-type">
+                                                <span></span>One way
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <span class="form-label">Flying from</span>
+                                                <input id="location-input" class="form-control" type="text" placeholder="City or airport">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <span class="form-label">Flying to</span>
+                                                <input id="destination-input" class="form-control" type="text"
+                                                    placeholder="City or airport">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <span class="form-label">Departing</span>
+                                                <input class="form-control" type="date" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <span class="form-label">Returning</span>
+                                                <input class="form-control" type="date" required>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
-                            <div class="row">
-                                <div class='col s3'>
-                                    <div class="row" id="city2Day1Temp"></div>
-                                </div>
+                            <div class="form-btn">
+                                <button class="submit">Show flights</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="flight-display col s12">
-                    <div class="row">
-                        <table id="arrival-table" class="table">
-                            <thead>
-                            <tbody id="arrival-table-body">
-                                <tr>
-                                    <th>Departing From</th>
-                                    <th>Arrival To</th>
-                                    <th>Date Leaving</th>
-                                    <th>Date Returning</th>
-                                </tr>
-                            </tbody>
-                            </thead>
-                            <tbody id="input-table-body"></tbody>
-                        </table>
-                    </div>
-                </div>
-
             </div>
         </div>
-
+    </div>
+    <div class="flight-display col s12">
+        <div class="row">
+            <table id="arrival-table" class="table">
+                <thead>
+                <tbody id="arrival-table-body">
+                    <tr id="data-table">
+                        <th id="data-results">Departing From</th>
+                        <th>Arrival To</th>
+                        <th>Date Leaving</th>
+                        <th>Date Returning</th>
+                    </tr>
+                </tbody>
+                </thead>
+                <tbody id="input-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Webcam Div -->
+    <div class="col s6" id=Webcam>
+        <!-- JQuery for webcam function inserts here -->
+    </div>
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     <!-- SKycons CDN -->
     <script type="text/javascript" src="https://darkskyapp.github.io/skycons/skycons.js"></script>
     <script type="text/javascript" src="./assets/htmlapp.js"></script>

@@ -1,8 +1,3 @@
-$( function() {
-    $( ".datepicker" ).datepicker();
-  } );
-
-
   // Function to capitalize first letter in inputs and city names shown
   $(document).ready(function () {  
     $(".form-control").keyup(function () {  
