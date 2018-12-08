@@ -5,9 +5,9 @@ $(document).ready(function () {
         cityArr = [];
         let begin = $("#location-input").val().trim();
         let end = $("#destination-input").val().trim();
-        if (begin !== "" && end !== ""){
-        cityArr.push({city: begin}, {city: end});
-        weatherData();
+        if (begin !== "" && end !== "") {
+            cityArr.push({ city: begin }, { city: end });
+            weatherData();
         } else {
             alert("Fill out all fields");
         }
@@ -55,9 +55,9 @@ $(document).ready(function () {
                 getData(lat, lon, id);
 
                 // Passing lat lon of second city for video API
-                // if (i === 1){
-                // JoshFuntcionHere(lat, lon);
-                // }
+                if (i === 1) {
+                    WebCamPull(lat, lon); x
+                }
             })
         }
     }

@@ -106,20 +106,18 @@
             <div class="weather-info col s9">
                 <div class="local-weather row">
                     <div class="local col s3">
-                            <div class="row">Current Weather
-                                <div class="cityName" id="city-name1"></div>
-                                <canvas id="icon0" width="64" height="64"></canvas>
+                        <div class="row">Current Weather
+                            <div class="cityName" id="city-name1"></div>
+                            <canvas id="icon0" width="64" height="64"></canvas>
+                        </div>
+                        <div class="row">
+                            <div class='col s3'>
+                                <div class="row" id="city1Day1Temp"></div>
                             </div>
-                            <div class="row">
-                                <div class='col s3'>
-                                    <div class="row" id="city1Day1Temp"></div>
-                                </div>
-                            </div>
+                        </div>
                     </div>
-                    <div class="col s6">
-                        <video class="video-fluid z-depth-1" autoplay loop controls muted>
-                            <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/mp4" />
-                        </video>
+                    <div class="col s6" id="Webcam">
+                        <!-- Live Webcam Feed gets placed in this div through jQuery -->
                     </div>
                     <div class="col s3">
                         <div class="row">Current Weather
@@ -161,6 +159,7 @@
     <!-- SKycons CDN -->
     <script type="text/javascript" src="https://darkskyapp.github.io/skycons/skycons.js"></script>
     <script type="text/javascript" src="./assets/htmlapp.js"></script>
+    <script src="assets/js/webcam.js"></script>
     <script src="./assets/js/weatherData.js"></script>
 </body>
 
