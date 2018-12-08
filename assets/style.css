@@ -3,6 +3,7 @@ label{
   color: white;
   font-size: 20px;
 }
+
 body {
     font-family: 'EB Garamond', serif;
     text-align: center;
@@ -19,10 +20,9 @@ body {
     max-width: 2000px;
     margin-top: 5px;
     margin: 0 auto;
-    /* background-image: url(https://cdn.hipwallpaper.com/i/36/95/x9o3JZ.png);     */
-    background-size: cover;
-   
+    background-size: cover;   
 }
+
 #data-results{
     text-align: center;
 }
@@ -37,6 +37,14 @@ body {
     padding: 50px;
   }
 
+.row .col.s3{
+	margin-left: auto;
+	left: auto;
+	right: auto;
+	text-align: center;
+	width: auto;
+	padding-left: 25px;
+}
 
 .active{
     color: black;
@@ -102,7 +110,7 @@ button:hover{
 
 .section .section-center {
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	left: 0;
 	right: 0;
 	-webkit-transform: translateY(-50%);
