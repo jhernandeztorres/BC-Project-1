@@ -28,21 +28,20 @@
                     </div>
                 </div>
             </div>
-            <!-- End Local Weather -->
-            <!-- Destination Weather -->
-            <div id="booking" class="section">
-                <div class="col s2" id="destination-weather">
-                    <div id="weather">Current Weather
-                        <div class="cityName" id="city-name2"></div>
-                        <div>
-                            <canvas id="icon1" width="64" height="64"></canvas>
+            <div class="weather-info col s9">
+                <div class="local-weather row">
+                    <div class="local col s3">
+                        <div class="row">Current Weather
+                            <div class="cityName" id="city-name1"></div>
+                            <canvas id="icon0" width="64" height="64"></canvas>
                         </div>
                         <div class="row">
                             <div class='col s3'>
-                                <div class="row" id="city2Day1Temp"></div>
+                                <div class="row" id="city1Day1Temp"></div>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <!-- End Destination Weather -->
                 <!-- Flight Box -->
@@ -77,12 +76,12 @@
                                                 </div>
                                             </div>
                                         </div>
-                                </div>
-                                <div class="form-btn">
-                                    <button class="submit">Show flights</button>
-                                </div>
-                                </form>
+                                    </div>
                             </div>
+                            <div class="form-btn">
+                                <button class="submit">Show flights</button>
+                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -115,16 +114,19 @@
                 </video>
             </a>
         </div>
+    </div>
+    <!-- Webcam Div -->
+    <div class="col s6" id=Webcam>
+        <!-- JQuery for webcam function inserts here -->
+    </div>
 
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     <!-- SKycons CDN -->
     <script type="text/javascript" src="https://darkskyapp.github.io/skycons/skycons.js"></script>
     <script type="text/javascript" src="./assets/htmlapp.js"></script>
+    <script src="assets/js/webcam.js"></script>
     <script src="./assets/js/weatherData.js"></script>
 </body>
 
