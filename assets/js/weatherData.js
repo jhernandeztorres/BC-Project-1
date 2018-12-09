@@ -14,6 +14,7 @@ $(document).ready(function () {
         } else {
             alert("Fill out all fields");
         }
+
     })
 
     function weatherData() {
@@ -59,7 +60,7 @@ $(document).ready(function () {
 
                 // Passing lat lon of second city for video API
                 if (i === 1) {
-                    WebCamPull(lat, lon); x
+                    WebCamPull(lat, lon);
                 }
             })
         }

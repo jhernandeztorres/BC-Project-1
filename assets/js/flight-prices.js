@@ -13,14 +13,29 @@ console.log(origin, destination);
             let results = response;
             console.log(results);
             for (let i =0; i < 3; i++){
-                let price = results.data[i].value;
+                let price = ('$'+results.data[i].value);
                 let purchasedDate = results.data[i].found_at;
                 let purchasedAt = results.data[i].gate;
                 let newDate = moment(purchasedDate).format('ll');
-                console.log(price);
-                console.log(purchasedDate);
-                console.log(purchasedAt);
-                console.log(newDate);
+                let begin = ($("#location-input").val().trim())
+                let end = ($("#destination-input").val().trim())
+                let beginCap = begin.charAt(0).toUpperCase() + begin.slice(1);
+                let endCap = end.charAt(0).toUpperCase() + end.slice(1);
+
+                let newRow = $(`<tr>
+                <td class='origin'>${beginCap}</td>
+                <td class='destination'>${endCap}</td>
+                <td class='price'>${price}</td>
+                <td class='purchasedVenue'>${purchasedAt}</td>
+                <td class='purchasedDate'>${newDate}</td>
+                </tr>` )
+
+                $('#input-table-body').append(newRow);
+                // console.log(newRow);
+                // console.log(price);
+                // console.log(purchasedDate);
+                // console.log(purchasedAt);
+                // console.log(newDate);
             }
             
         });
