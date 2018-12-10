@@ -13,10 +13,12 @@ console.log(origin, destination);
             let results = response;
             console.log(results);
             for (let i =0; i < 3; i++){
-                let price = ('$'+results.data[i].value);
+                let price = ('$'+ results.data[i].value);
                 let purchasedDate = results.data[i].found_at;
+                let departureDate = results.data[i].depart_date;
                 let purchasedAt = results.data[i].gate;
                 let newDate = moment(purchasedDate).format('ll');
+                let daysAdvance = moment(departureDate).diff(moment(newDate), "days");
                 let begin = ($("#location-input").val().trim())
                 let end = ($("#destination-input").val().trim())
                 let beginCap = begin.charAt(0).toUpperCase() + begin.slice(1);
@@ -28,6 +30,7 @@ console.log(origin, destination);
                 <td class='price'>${price}</td>
                 <td class='purchasedVenue'>${purchasedAt}</td>
                 <td class='purchasedDate'>${newDate}</td>
+                <td class='purchasedDate'>${daysAdvance}</td>
                 </tr>` )
 
                 $('#input-table-body').append(newRow);
@@ -35,7 +38,9 @@ console.log(origin, destination);
                 // console.log(price);
                 // console.log(purchasedDate);
                 // console.log(purchasedAt);
-                // console.log(newDate);
+                console.log(newDate);
+                console.log(departureDate);
+                console.log(daysAdvance);
             }
             
         });
