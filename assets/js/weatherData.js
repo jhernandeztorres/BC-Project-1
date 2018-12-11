@@ -5,6 +5,7 @@ $(document).ready(function () {
         e.preventDefault()
         cityArr = [];
         iatacodes = [];
+        console.log(iatacodes)
         let begin = $("#location-input").val().trim();
         let end = $("#destination-input").val().trim();
         if (begin !== "" && end !== "") {

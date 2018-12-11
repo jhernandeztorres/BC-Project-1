@@ -1,4 +1,5 @@
 function flightPrices(origin, destination) {
+    $('#input-table-body').empty();
 console.log(origin, destination);
     const apiKey = "bc96059820e0418c8372befa541b0739";
     const cors = 'https://cors-anywhere.herokuapp.com/';
@@ -25,11 +26,11 @@ console.log(origin, destination);
                 let endCap = end.charAt(0).toUpperCase() + end.slice(1);
 
                 let newRow = $(`<tr>
-                <td class='origin'>${beginCap}</td>
-                <td class='destination'>${endCap}</td>
-                <td class='price'>${price}</td>
+                <td class='origin center'>${beginCap}</td>
+                <td class='destination center'>${endCap}</td>
+                <td class='price center'>${price}</td>
                 <td class='purchasedVenue'>${purchasedAt}</td>
-                <td class='purchasedDate'>${newDate}</td>
+                <td class='purchasedDate center'>${newDate}</td>
                 <td class='purchasedDays'>${daysAdvance}</td>
                 </tr>` )
 

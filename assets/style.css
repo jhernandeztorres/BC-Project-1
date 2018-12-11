@@ -308,3 +308,13 @@ button:hover{
 	color: #191a1e;
 }
 /* END BOOKING BOX */
+
+/* table text align center */
+
+.center{
+	text-align: center;
+}
+
+.purchasedDays{
+	padding-left:80px;
+}
