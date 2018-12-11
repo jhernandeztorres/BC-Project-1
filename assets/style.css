@@ -1,4 +1,14 @@
+.topbar-left-logo {
+	background: #2c3840;
+	height: 70px;
+	text-align: center;
+	padding-top: 20px;
+	color: white;
+  }
 
+.topHeader{
+	height: 30px;
+}  
 label{
   color: white;
   font-size: 20px;
