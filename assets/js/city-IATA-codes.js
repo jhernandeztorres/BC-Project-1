@@ -46843,7 +46843,7 @@ var iataData =  [
 var iatacodes = []    
 
     function aroundIATA(x, y){
-        console.log(x ,y);
+        // console.log(x ,y);
         for (let i =0; i < iataData.length; i++){
             if(x == iataData[i].name.toLowerCase()){
             //    flightprices(origin, destination);
