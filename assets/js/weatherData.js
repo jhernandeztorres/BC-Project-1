@@ -60,8 +60,12 @@ $(document).ready(function () {
                 getData(lat, lon, id);
 
                 // Passing lat lon of second city for video API
+                if (i === 0) {
+                    OriginWebCamPull(lat, lon);
+                }
+
                 if (i === 1) {
-                    WebCamPull(lat, lon);
+                    DestinationWebCamPull(lat, lon);
                 }
             })
         }
