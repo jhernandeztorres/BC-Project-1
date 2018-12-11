@@ -11,9 +11,11 @@ $(document).ready(function () {
             cityArr.push({ city: begin }, { city: end });
             weatherData();
             aroundIATA(begin, end)
+            // fakeFunction()
         } else {
             alert("Fill out all fields");
         }
+
     })
 
     function weatherData() {
