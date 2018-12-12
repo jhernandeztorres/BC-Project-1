@@ -21,7 +21,7 @@ function OriginWebCamPull(lat, lon) {
             const liveVid = random.player.live.embed;
             const dayVid = random.player.day.embed;
             const vidDiv = $("<div class ='vid' 'col s6 text-center'>");
-            let vid = $("<iframe width='420' height='240' align='center'>");
+            let vid = $("<iframe width='420' height='240' allowfullscreen />");
 
             if (liveVidAvailable === true) {
                 vid.attr("src", liveVid)
@@ -62,7 +62,7 @@ function DestinationWebCamPull(lat, lon) {
             const liveVid = random.player.live.embed;
             const dayVid = random.player.day.embed;
             const vidDiv = $("<div class ='vid' 'col s6 text-center'>");
-            let vid = $("<iframe width='420' height='240' align='center'>");
+            let vid = $("<iframe width='420' height='240' allowfullscreen />");
 
             if (liveVidAvailable === true) {
                 vid.attr("src", liveVid);

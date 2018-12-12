@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300');
+
+p{
+	font-weight: bold;
+}
+
 .topbar-left-logo {
 	background: #2c3840;
 	height: 70px;
@@ -15,7 +21,7 @@ label{
 }
 
 body {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Noto Sans JP', sans-serif;
     text-align: center;
     font-size: 25px;
     color: black;
@@ -40,7 +46,7 @@ body {
 #destination-weather{
     float: right;
     text-align: center;
-    font-family: 'EB Garamond', serif;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .local-weather{
@@ -128,7 +134,7 @@ button:hover{
 }
 /* BOOKING BOX */
 #booking {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans JP', sans-serif;
 	background-image: url('../img/background.jpg');
 	background-size: cover;
 	background-position: center;
