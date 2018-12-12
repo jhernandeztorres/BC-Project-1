@@ -15,7 +15,7 @@
     <header class="topHeader">
         <div class="top-bar topbar-left-logo" id="topbar-center-logo"> SAVE MONEY! BUY CHEAP FLIGHTS!
             <div class="top-bar-center">
-                <a href="#"><img src="https://static.thenounproject.com/png/84-200.png" alt="plane" /></a>
+                <a href="#arrival-table"><img src="https://static.thenounproject.com/png/84-200.png" alt="plane" /></a>
             </div>
         </div>
     </header>
@@ -34,7 +34,6 @@
                         <!-- JQuery for webcam function inserts here -->
                     </div>
                 </div>
-                <br>
             </div>
             <div class="col s6">
                 <p>Destination Weather</p>
@@ -91,38 +90,30 @@
     <!-- End Flight Box -->
     </div>
     <!-- Flight Results -->
-    <div class="flight-display col s12">
-        <div class="row">
-            <table id="arrival-table" class="table">
-                <thead>
-                <tbody id="arrival-table-body">
-                    <tr id="data-table">
-                        <th id="data-results">Departing From</th>
-                        <th>Arrival To</th>
-                        <th>Final Price</th>
-                        <th>Purchased At</th>
-                        <th>Purchased Date</th>
-                        <th>Days in Advance</th>
-                    </tr>
-                </tbody>
-                </thead>
-                <tbody id="input-table-body">
-                    
-                </tbody>
-            </table>
+    <div class="container">
+        <div class="flight-display col s12">
+            <div class="row">
+                <table id="arrival-table" class="table highlight">
+                    <thead>
+                    <tbody id="arrival-table-body">
+                        <tr id="data-table">
+                            <th id="data-results">Departing From</th>
+                            <th>Arrival To</th>
+                            <th>Final Price</th>
+                            <th>Purchased At</th>
+                            <th>Purchased Date</th>
+                            <th>Days in Advance</th>
+                        </tr>
+                    </tbody>
+                    </thead>
+                    <tbody id="input-table-body">
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <!-- End Flight Results -->
-    <div class="col s6">
-        <a name="video">
-            <!-- Webcam Div -->
-            <div class="col s6" id=Webcam>
-                <!-- JQuery for webcam function inserts here -->
-            </div>
-            </video>
-        </a>
-    </div>
-    </div>
 
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -137,7 +128,7 @@
     <script type="text/javascript" src="./assets/js/city-IATA-codes.js"></script>
     <script src="./assets/js/weatherData.js"></script>
     <script type="text/javascript" src="./assets/js/flight-prices.js"></script>
-    
+
 </body>
 
 </html>
