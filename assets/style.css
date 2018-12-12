@@ -324,3 +324,8 @@ button:hover{
 .purchasedDays{
 	padding-left:80px;
 }
+
+#arrival-table{
+	background-color: #fff;
+	color:#4fa3e3;
+}
